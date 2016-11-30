@@ -352,7 +352,7 @@ class DocumentPersister
         //echo '<pre>'.var_export($this->class,true).'</pre>';exit;
         if ( ! empty($update)) {
             unset($update['$set']);
-            $m = new Marshaler([ 'ignore_invalid' => true );
+            $m = new Marshaler([ 'ignore_invalid' => true ]);
             $item = $m->marshalItem($update);
 
             $result = $this->dm->getClient()->putItem([
